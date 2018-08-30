@@ -24,4 +24,6 @@ end
 #(board[index] ==  " " || board[index] == "" || board[index] == nil)
 #false : true
 
-def turn
+def turn(board)
+
+end
