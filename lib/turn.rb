@@ -12,25 +12,16 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-
-def move(board, index, player = "X")
-  board[index] = player
-end
-
-
 def valid_move?(board, index)
-  if !position_taken?(board, index) && index.between?(0, 8)
+  if index.between?(0, 8) && !position_taken?(board, index)
     true
+  else
   end
 end
 
-def position_taken?(board, index)
-  if (board[index] ==  " " || board[index] == "" || board[index] == nil)
-    false
-  else
-    true
-  end
-end
+
 #advanced solution w/ ternary op (?; false : true)
 #(board[index] ==  " " || board[index] == "" || board[index] == nil)
 #false : true
+
+def turn
