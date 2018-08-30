@@ -19,10 +19,22 @@ def valid_move?(board, index)
   end
 end
 
+def position_taken?(board, index)
+  if (board[index] == "X") || (board[index] == "O")
+    true
+  elsif (board[index] === "" || " " || nil)
+    false
+  end
+end
+
 
 #advanced solution w/ ternary op (?; false : true)
 #(board[index] ==  " " || board[index] == "" || board[index] == nil)
 #false : true
+
+def move(board, index, player = "X")
+  board[index] = player
+end
 
 def turn(board)
 
